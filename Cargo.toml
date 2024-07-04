@@ -3,6 +3,8 @@ name = "love_equinox"
 version = "0.1.0"
 edition = "2021"
 authors = ["Normthenord"]
+description = "A library for calculating your Love Equinox"
+license = "MIT"
 
 [dependencies]
 time = "0.3.36"
