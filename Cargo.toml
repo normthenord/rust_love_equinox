@@ -1,0 +1,14 @@
+[package]
+name = "love_equinox"
+version = "0.1.0"
+edition = "2021"
+authors = ["Normthenord"]
+
+[dependencies]
+time = "0.3.36"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
