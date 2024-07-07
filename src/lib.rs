@@ -3,6 +3,17 @@ use time::Date;
 
 /// Calculates your love Equinox and returns it as a time::Date
 /// You must supply two time::Dates for this function
+/// ```
+/// # use time::Date;
+/// # use love_equinox::calculate_le;
+/// # fn main() -> std::result::Result<(), Box<dyn std::error::Error>>{
+/// let first_date = Date::from_calendar_date(2006, time::Month::May, 26)?;
+/// let birthday = Date::from_calendar_date(1988, time::Month::June, 12)?;
+/// assert_eq!(calculate_le(first_date, birthday)?, 
+///            Date::from_calendar_date(2024, time::Month::May, 8)?);
+/// # Ok(())
+/// }
+///  ```
 pub fn calculate_le(first_date: Date, birthday: Date) -> Result<Date,String> {
     if first_date < birthday{
         return Err("You weren't born when the relationship started!".to_owned())
